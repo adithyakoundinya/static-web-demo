@@ -40,66 +40,8 @@
       </div>
 
       <div id="instructable" class="tab-content">
-        <h2>Instructable: Configuring the CI/CD Pipeline</h2>
-        <p>Follow these four steps to set up automated testing and live deployment to GitHub Pages:</p>
-
-        <ol class="steps-list">
-          <li>
-            <strong>1. Configure GitHub Pages Permissions:</strong><br>
-            Go to your repository settings: <code>Settings &gt; Pages &gt; Build and deployment &gt; Source</code> and set it to <strong>GitHub Actions</strong>.
-          </li>
-          <li>
-            <strong>2. Create Workflow Directory:</strong><br>
-            In your project root, create the folder structure: <code>.github/workflows/</code>.
-          </li>
-          <li>
-            <strong>3. Add Workflow File (<code>deploy.yml</code>):</strong><br>
-            Create <code>.github/workflows/deploy.yml</code> with the configuration below:
-            <pre><code>name: Deploy Static Website
-
-on:
-  push:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm test
-
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'src/'
-      - id: deployment
-        uses: actions/deploy-pages@v4</code></pre>
-          </li>
-          <li>
-            <strong>4. Push and Observe:</strong><br>
-            Push changes to <code>main</code> and monitor execution under the <strong>Actions</strong> tab on GitHub!
-          </li>
-        </ol>
+        <h2>Instructable: GitHub Actions & GitPages</h2>
+        <p>This website is automatically built and published using GitHub Actions workflows targeting GitHub Pages.</p>
       </div>
 
       <!-- STUDENTS WILL ADD "About Me" CONTENT HERE -->
