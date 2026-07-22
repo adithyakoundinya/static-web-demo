@@ -1,55 +1,29 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f0f2f5;
-  color: #1c1e21;
-  padding: 2rem 1rem;
+/* Styling for Instructable code blocks and lists */
+.steps-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  line-height: 1.6;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+.steps-list li {
+  margin-bottom: 1.5rem;
 }
 
-header {
-  background: #003366;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-
-.subtitle { color: #b0c4de; margin-top: 0.5rem; }
-
-.tabs {
-  display: flex;
-  background: #e4e6eb;
-  border-bottom: 2px solid #ccc;
-  overflow-x: auto;
-}
-
-.tab-btn {
-  flex: 1;
+pre {
+  background-color: #282c34;
+  color: #abb2bf;
   padding: 1rem;
-  border: none;
-  background: transparent;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
 }
 
-.tab-btn:hover { background: #d8dadf; }
-.tab-btn.active {
-  background: white;
-  color: #003366;
-  border-bottom: 3px solid #003366;
+code {
+  background-color: #e9ecef;
+  color: #d63384;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
-
-.content-box { padding: 2rem; min-height: 180px; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
