@@ -1,0 +1,7 @@
+{
+  "name": "static-web-cicd",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node tests/site.test.js"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PES University - CI/CD Course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PES University</h1>
+      <p class="subtitle">Software Engineering & DevOps Workshop</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs" id="nav-tabs">
+      <button class="tab-btn active" onclick="showTab('pes')">PES University</button>
+      <button class="tab-btn" onclick="showTab('se')">Software Engineering</button>
+      <button class="tab-btn" onclick="showTab('cicd')">CI/CD Pipeline</button>
+      <button class="tab-btn" onclick="showTab('instructable')">Instructable</button>
+      <!-- STUDENTS WILL ADD "About Me" TAB HERE -->
+    </nav>
+
+    <!-- Tab Contents -->
+    <main class="content-box">
+      <div id="pes" class="tab-content active">
+        <h2>PES University</h2>
+        <p>Welcome to PES University's hands-on Software Engineering lab session!</p>
+      </div>
+
+      <div id="se" class="tab-content">
+        <h2>Software Engineering</h2>
+        <p>Learn core principles of code quality, automated testing, and version control.</p>
+      </div>
+
+      <div id="cicd" class="tab-content">
+        <h2>CI/CD Pipeline</h2>
+        <p>Continuous Integration (CI) tests code automatically. Continuous Deployment (CD) ships code to production.</p>
+      </div>
+
+      <div id="instructable" class="tab-content">
+        <h2>Instructable: GitHub Actions & GitPages</h2>
+        <p>This website is automatically built and published using GitHub Actions workflows targeting GitHub Pages.</p>
+      </div>
+
+      <!-- STUDENTS WILL ADD "About Me" CONTENT HERE -->
+    </main>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      
+      const targetContent = document.getElementById(tabId);
+      if (targetContent) targetContent.classList.add('active');
+      
+      const targetBtn = Array.from(document.querySelectorAll('.tab-btn'))
+        .find(b => b.getAttribute('onclick')?.includes(tabId));
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
