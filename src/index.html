@@ -3,61 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PES University - CI/CD Course</title>
+  <title>Vilu - PES University</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>PES University</h1>
-      <p class="subtitle">Software Engineering & DevOps Workshop</p>
+      <p class="subtitle">Computer Science & Space Technology</p>
     </header>
-
     <!-- Navigation Tabs -->
     <nav class="tabs" id="nav-tabs">
       <button class="tab-btn active" onclick="showTab('pes')">PES University</button>
       <button class="tab-btn" onclick="showTab('se')">About me</button>
       <button class="tab-btn" onclick="showTab('cicd')">CI/CD Pipeline</button>
       <button class="tab-btn" onclick="showTab('instructable')">Instructable</button>
-      <!-- STUDENTS WILL ADD "About Me" TAB HERE -->
     </nav>
-
     <!-- Tab Contents -->
     <main class="content-box">
       <div id="pes" class="tab-content active">
         <h2>PES University</h2>
-        <p>Welcome to PES University's hands-on Software Engineering lab session! by Vadiraja</p>
+        <p>Welcome to my Software Engineering and DevOps project at PES University.</p>
+        <p>This website represents my learning and practical work with modern software development.</p>
       </div>
-
       <div id="se" class="tab-content">
         <h2>About Me</h2>
-        <p>Adithya Balasubramanyam, Professor, Dept of CSE</p>
+        <p>Hi! I'm Vilu, a Computer Science student at PES University.</p>
+        <p>I am passionate about technology, software engineering, space exploration, and astronomy.</p>
+        <p>I enjoy learning how computers and software can solve challenging real-world problems.</p>
+        <p>My journey in Computer Science has introduced me to programming, algorithms, databases, and networking.</p>
+        <p>I particularly enjoy understanding how different components of a system work together.</p>
+        <p>I like building projects because practical implementation helps me understand concepts better.</p>
+        <p>I am also interested in software development practices that help teams build reliable applications.</p>
+        <p>Version control and collaborative development are areas I am actively learning and practicing.</p>
+        <p>DevOps and CI/CD have interested me because they connect development with automation and deployment.</p>
+        <p>I enjoy exploring how automation can make software development faster and more dependable.</p>
+        <p>Beyond Computer Science, space has always been one of my biggest interests.</p>
+        <p>I enjoy learning about rockets, spacecraft, planets, stars, and the engineering behind missions.</p>
+        <p>Astronomy fascinates me because it combines science, mathematics, engineering, and exploration.</p>
+        <p>I am curious about how software contributes to modern space missions and advanced technology.</p>
+        <p>I also enjoy following developments in the global space industry.</p>
+        <p>Learning about new rockets and spacecraft motivates me to keep improving my technical skills.</p>
+        <p>Whenever I learn something new, I try to understand not only how it works, but why it is needed.</p>
+        <p>I enjoy breaking complicated concepts into smaller and easier-to-understand parts.</p>
+        <p>This approach helps me connect theoretical knowledge with practical applications.</p>
+        <h3>My Technical Interests</h3>
+        <p>My technical interests include software engineering, algorithms, databases, and computer networks.</p>
+        <p>I am also exploring web development and learning how frontend and backend systems communicate.</p>
+        <p>Git and GitHub are important tools I am learning to use for collaborative software development.</p>
+        <p>I am interested in writing code that is understandable, maintainable, and reliable.</p>
+        <h3>My Interest in Space</h3>
+        <p>Space exploration inspires me because it pushes technology to operate under difficult conditions.</p>
+        <p>Rockets require precise engineering, careful planning, and highly reliable software.</p>
+        <p>Space missions also demonstrate how different engineering disciplines can work together.</p>
+        <p>I hope to continue learning about the intersection of computing and space technology.</p>
+        <h3>Beyond Academics</h3>
+        <p>Outside academics, I enjoy following Formula 1 and keeping up with motorsport technology.</p>
+        <p>Formula 1 interests me because of its focus on speed, precision, data, and engineering.</p>
+        <p>I find the use of software, telemetry, simulation, and real-time decision making especially interesting.</p>
+        <p>Both Formula 1 and space exploration show how technology can be pushed to its limits.</p>
+        <h3>Learning Philosophy</h3>
+        <p>I believe that the best way to learn Computer Science is to combine theory with practice.</p>
+        <p>Working on projects gives me opportunities to experiment, make mistakes, and improve.</p>
+        <p>I try to approach problems logically and understand the reasoning behind each solution.</p>
+        <p>I also value teamwork because software projects often require people with different skills.</p>
+        <h3>My Goals</h3>
+        <p>My goal is to strengthen my foundations in Computer Science and become a better software engineer.</p>
+        <p>I want to gain experience by working on meaningful technical projects.</p>
+        <p>I also want to develop stronger skills in system design, programming, and software development.</p>
+        <p>In the future, I hope to work on challenging technology problems involving engineering and innovation.</p>
+        <p>I would especially enjoy opportunities where computing and space technology intersect.</p>
       </div>
-
       <div id="cicd" class="tab-content">
         <h2>CI/CD Pipeline</h2>
-        <p>Continuous Integration (CI) tests code automatically. Continuous Deployment (CD) ships code to production.</p>
+        <p>Continuous Integration automatically builds and tests code whenever changes are made.</p>
+        <p>Continuous Deployment automates the delivery of tested changes to users.</p>
+        <p>CI/CD helps teams release software faster, more reliably, and with fewer manual errors.</p>
       </div>
-
       <div id="instructable" class="tab-content">
-        <h2>Instructable: GitHub Actions & GitPages</h2>
-        <p>This website is automatically built and published using GitHub Actions workflows targeting GitHub Pages.</p>
+        <h2>Instructable: GitHub Actions & GitHub Pages</h2>
+        <p>This website demonstrates automated build and deployment using GitHub Actions.</p>
       </div>
-
-      <!-- STUDENTS WILL ADD "About Me" CONTENT HERE -->
     </main>
   </div>
-
   <script>
     function showTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      
       const targetContent = document.getElementById(tabId);
       if (targetContent) targetContent.classList.add('active');
-      
-      const targetBtn = Array.from(document.querySelectorAll('.tab-btn'))
-        .find(b => b.getAttribute('onclick')?.includes(tabId));
+      const targetBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick')?.includes(tabId));
       if (targetBtn) targetBtn.classList.add('active');
     }
   </script>
